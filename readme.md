@@ -23,3 +23,16 @@ colcon build --packages-select=ros2_qt_demo
 
 
 
+**用qt建立簡單的ui**
+
+![image-20230524101307336](pic/readme/image-20230524101307336.png)
+
+編譯系統記得選cmake
+
+![image-20230524100800867](pic/readme/image-20230524100800867.png)
+
+![image-20230524101719779](pic/readme/image-20230524101719779.png)
+
+
+
+**檔案搬移**
