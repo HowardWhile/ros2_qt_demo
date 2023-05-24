@@ -37,10 +37,11 @@ add_executable(demo
 # 鏈接依賴項
 # ------------------------------------------
 # ros
-
-# qt
 target_link_libraries(demo 
   ${rclcpp_LIBRARIES} 
+)
+# qt
+target_link_libraries(demo 
   Qt5::Core 
   Qt5::Gui
   Qt5::Widgets
