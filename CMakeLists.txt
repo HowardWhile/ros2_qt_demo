@@ -49,7 +49,10 @@ target_link_libraries(demo
 # ------------------------------------------
 # 包含其他包的標頭檔路徑
 # ------------------------------------------
-# ament_target_dependencies(demo std_msgs)
+ament_target_dependencies(demo 
+  rclcpp
+  std_msgs
+)
 
 # ------------------------------------------
 # 設置自動MOC、UIC和RCC (與QT相關)
