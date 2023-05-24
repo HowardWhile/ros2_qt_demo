@@ -14,7 +14,7 @@ node 名稱為 `demo`
 
 
 
-### **建立ros包**
+## **建立ros包**
 
 ```shell
 cd ~/ros2_ws/src
@@ -23,7 +23,7 @@ ros2 pkg create --build-type ament_cmake ros2_qt_demo
 
 
 
-### **用qt建立簡單的ui**
+## **用qt建立簡單的ui**
 
 ![image-20230524101307336](pic/readme/image-20230524101307336.png)
 
@@ -37,13 +37,13 @@ ros2 pkg create --build-type ament_cmake ros2_qt_demo
 
 
 
-### **UI檔案搬移**
+## **UI檔案搬移**
 
 ![image-20230524111535853](pic/readme/image-20230524111535853.png)
 
 
 
-### **調整CMakeLists.txt**
+## **調整CMakeLists.txt**
 
 
 
@@ -120,7 +120,7 @@ ament_package()
 
 
 
-### **編譯測試**
+## **編譯測試**
 
 ```shell
 cd ~/ros2_ws/
@@ -130,7 +130,7 @@ colcon build --packages-select=ros2_qt_demo
 
 
 
-### **執行測試**
+## **執行測試**
 
 ```shell
 #source ~/ros2_ws/install/setup.bash #如有必要
@@ -139,9 +139,9 @@ ros2 run ros2_qt_demo demo
 
 
 
-### **使用qtcreator開啟ROS的project**
+## **使用qtcreator開啟ROS的project**
 
-#### 啟動qtcreator的方法
+### 啟動qtcreator的方法
 
 **注意啟動qtcreator必須具有ROS的環境才能正常載入ROS的project**
 
@@ -178,7 +178,7 @@ MimeType=text/x-c++src;text/x-c++hdr;text/x-xsrc;application/x-designer;applicat
 
 將`Exec=/usr/bin/qtcreator` 邊更為`Exec=bash -i -c /usr/bin/qtcreator` 這個路徑會隨著qtcreator的路徑變化保存後存檔
 
-#### 開啟ROS project
+### 開啟ROS project
 
 在Qt Creator中，選擇"Open File or Project"，然後選擇ros2_qt_demo文件夾中的CMakeLists.txt文件
 
@@ -189,3 +189,9 @@ MimeType=text/x-c++src;text/x-c++hdr;text/x-xsrc;application/x-designer;applicat
 ![image-20230524152202669](pic/readme/image-20230524152202669.png)
 
 ![image-20230524152709371](pic/readme/image-20230524152709371.png)
+
+> 過程產物 
+>
+> 專案載入後會自動產生 `CMakeLists.txt.user `可以刪除或被忽略
+>
+> 如果使用預設值配置 qtcreator會自動編譯執行檔在CMakeLists的上一層目錄中例如:`~/ros2_ws/src/build-ros2_qt_demo-unknown-Debug`，要注意的是這個編譯出來的執行檔與`ros2 run` 的執行檔目標無關。
