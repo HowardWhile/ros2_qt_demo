@@ -29,6 +29,8 @@ find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets)
 add_executable(demo 
   src/main.cpp
   src/mainwindow.cpp
+  src/mainwindow.h
+  src/mainwindow.ui
 )
 
 # ------------------------------------------
