@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 #include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
 
 
 QT_BEGIN_NAMESPACE
@@ -26,9 +27,14 @@ private:
 
 private:
     // -------------------------------------
-    // ros node
+    // ros
     // -------------------------------------
+    // node
     rclcpp::Node::SharedPtr node_;
+    // pub
+    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;   
+    // sub 
+    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscriber_;
     // -------------------------------------
 
 };
